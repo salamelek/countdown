@@ -1,5 +1,6 @@
-* {
-    font-family: Tahoma;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Alaska,sans-serif;
 }
 
 .column {

@@ -1,16 +1,17 @@
-var upgradeTime = 80000;
-var seconds = upgradeTime;
-let targetTimeStamp = 1654862400;
+const upgradeTime = 80000;
+let seconds = upgradeTime;
+let targetTimeStamp = 1686312000;
+
+let countdownTimer = setInterval('timer()', 100);
 
 function timer() {
     const d = new Date();
     let currentTimeStamp = d.getTime();
-    var remainingTime = Math.round(targetTimeStamp - (currentTimeStamp / 1000));
-    
+    let remainingTime = Math.round(targetTimeStamp - (currentTimeStamp / 1000));
+
     const minute = 60;
     const hour = minute * 60;
     const day = hour * 24;
-    const year = day * 365;
     
     const remainingDays = Math.trunc(remainingTime / day);
     remainingTime = remainingTime - (remainingDays * day);
@@ -25,7 +26,7 @@ function timer() {
     document.getElementById('minutes1').innerHTML = remainingMinutes;
     document.getElementById('seconds1').innerHTML = remainingSeconds;
     
-    if (seconds == 0) {
+    if (seconds === 0) {
         clearInterval(countdownTimer);
         document.getElementById('countdown').innerHTML = "Completed";
     } 
@@ -33,4 +34,3 @@ function timer() {
         seconds--;
     }
 }
-var countdownTimer = setInterval('timer()', 100);
