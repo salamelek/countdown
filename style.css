@@ -1,0 +1,26 @@
+* {
+    font-family: Tahoma;
+}
+
+.column {
+    display: inline-block;
+}
+
+.value {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.textBox {
+    align-self: center;
+}
+
+.flex_container {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
